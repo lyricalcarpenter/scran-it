@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scran It — Local Restaurants Near You</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1 class="logo">Scran.it</h1>
+      <p class="tagline">Locally owned restaurants near you</p>
+      <div class="search-wrap">
+        <input type="text" id="search" class="search-input" placeholder="Search cuisine or dish (e.g. Italian, tacos, burgers…)" autocomplete="off">
+        <button type="button" id="search-btn" class="search-btn" aria-label="Search">Search</button>
+      </div>
+      <div class="location-status" id="location-status">Getting your location…</div>
+    </header>
+
+    <main class="main">
+      <aside class="sidebar">
+        <h2 class="sidebar-title">Results</h2>
+        <div class="results-meta" id="results-meta"></div>
+        <ul class="restaurant-list" id="restaurant-list"></ul>
+        <div class="empty-state" id="empty-state">
+          <p>Search for a type of food to see locally owned spots near you.</p>
+        </div>
+      </aside>
+      <div class="map-wrap">
+        <div id="map"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+  <script src="app.js"></script>
+</body>
+</html>
