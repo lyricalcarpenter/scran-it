@@ -11,7 +11,7 @@
   let markers = [];
   let currentResults = [];
 
-  const PRICE_COLORS = { '$': '#5c7c6a', '$$': '#c45c3e', '$$$': '#6b2d1a' };
+  const PRICE_COLORS = { '$': '#8fa87e', '$$': '#d4a574', '$$$': '#a89f94' };
 
   const userLocationIcon = L.divIcon({
     className: 'map-pin map-pin-user',
