@@ -1,0 +1,7 @@
+{"location":"server/index.js","message":"server started","data":{"port":3001,"script":"server/index.js"},"timestamp":1771021906237}
+{"location":"server/index.js","message":"incoming request","data":{"method":"GET","url":"/","path":"/"},"timestamp":1771021932777}
+{"location":"server/index.js","message":"incoming request","data":{"method":"GET","url":"/styles.css","path":"/styles.css"},"timestamp":1771021932825}
+{"location":"server/index.js","message":"incoming request","data":{"method":"GET","url":"/app.js","path":"/app.js"},"timestamp":1771021932845}
+{"location":"server/index.js","message":"incoming request","data":{"method":"GET","url":"/favicon.ico","path":"/favicon.ico"},"timestamp":1771021932977}
+{"location":"server/index.js","message":"incoming request","data":{"method":"GET","url":"/api/restaurants?q=burger&lat=30.26771571977279&lng=-97.74303172314835","path":"/api/restaurants"},"timestamp":1771021935740}
+{"location":"server/index.js","message":"api/restaurants handler hit","data":{"query":{"q":"burger","lat":"30.26771571977279","lng":"-97.74303172314835"}},"timestamp":1771021935746}

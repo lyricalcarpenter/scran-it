@@ -1,30 +1,34 @@
 (function () {
   'use strict';
 
-  // Default center (used until we have user location)
-  const DEFAULT_CENTER = [37.7749, -122.4194]; // San Francisco
+  // Default center (used until we have user location) — Austin, TX
+  const DEFAULT_CENTER = [30.2672, -97.7431];
   const DEFAULT_ZOOM = 13;
-
-  // Mock locally owned restaurants – varied cuisines and locations near default center
-  const RESTAURANTS = [
-    { id: 1, name: "Mama Rosa's", cuisine: "Italian", types: ["italian", "pasta", "pizza"], lat: 37.778, lng: -122.412, price: "$$" },
-    { id: 2, name: "El Mercado", cuisine: "Mexican", types: ["mexican", "tacos", "burritos"], lat: 37.771, lng: -122.425, price: "$" },
-    { id: 3, name: "The Local Burger Co.", cuisine: "American", types: ["american", "burgers", "burgers"], lat: 37.776, lng: -122.408, price: "$$" },
-    { id: 4, name: "Sakura Kitchen", cuisine: "Japanese", types: ["japanese", "sushi", "ramen"], lat: 37.782, lng: -122.418, price: "$$$" },
-    { id: 5, name: "Spice Route", cuisine: "Indian", types: ["indian", "curry", "naan"], lat: 37.769, lng: -122.415, price: "$$" },
-    { id: 6, name: "Pho & Co", cuisine: "Vietnamese", types: ["vietnamese", "pho", "noodles"], lat: 37.773, lng: -122.422, price: "$" },
-    { id: 7, name: "Bella Trattoria", cuisine: "Italian", types: ["italian", "pasta", "wine"], lat: 37.768, lng: -122.428, price: "$$$" },
-    { id: 8, name: "Taqueria Verde", cuisine: "Mexican", types: ["mexican", "tacos", "tacos"], lat: 37.780, lng: -122.430, price: "$" },
-    { id: 9, name: "Garden Grill", cuisine: "American", types: ["american", "burgers", "salads"], lat: 37.775, lng: -122.435, price: "$$" },
-    { id: 10, name: "Dragon Bowl", cuisine: "Chinese", types: ["chinese", "noodles", "rice"], lat: 37.770, lng: -122.410, price: "$$" },
-    { id: 11, name: "Thai Orchid", cuisine: "Thai", types: ["thai", "curry", "pad thai"], lat: 37.777, lng: -122.415, price: "$$" },
-    { id: 12, name: "Le Petit Bistro", cuisine: "French", types: ["french", "bistro", "wine"], lat: 37.781, lng: -122.424, price: "$$$" },
-  ];
 
   let userLocation = null;
   let map = null;
+  let userMarker = null;
   let markers = [];
   let currentResults = [];
+
+  const PRICE_COLORS = { '$': '#5c7c6a', '$$': '#c45c3e', '$$$': '#6b2d1a' };
+
+  const userLocationIcon = L.divIcon({
+    className: 'map-pin map-pin-user',
+    html: '<span class="map-pin-user-dot"></span>',
+    iconSize: [14, 14],
+    iconAnchor: [7, 7],
+  });
+
+  function getRestaurantIcon(price) {
+    const color = PRICE_COLORS[price] || PRICE_COLORS['$$'];
+    return L.divIcon({
+      className: 'map-pin map-pin-restaurant',
+      html: `<span class="map-pin-restaurant-dot" style="background-color:${color};border-color:${color}"></span>`,
+      iconSize: [22, 22],
+      iconAnchor: [11, 11],
+    });
+  }
 
   const $search = document.getElementById('search');
   const $searchBtn = document.getElementById('search-btn');
@@ -54,15 +58,17 @@
     return haversineDistance(center[0], center[1], restaurant.lat, restaurant.lng);
   }
 
-  function matchQuery(restaurant, query) {
-    if (!query || !query.trim()) return false;
-    const q = query.trim().toLowerCase();
-    const searchable = [
-      restaurant.name,
-      restaurant.cuisine,
-      ...restaurant.types
-    ].join(' ').toLowerCase();
-    return searchable.includes(q) || restaurant.types.some(t => t.includes(q));
+  function applyResults(results) {
+    const withDistance = results
+      .map(r => ({ ...r, distance: distanceToMiles(r) }))
+      .sort((a, b) => a.distance - b.distance);
+    currentResults = withDistance;
+    renderList(withDistance);
+    updateMapMarkers(withDistance);
+    $emptyState.classList.add('hidden');
+    $resultsMeta.textContent = withDistance.length
+      ? `${withDistance.length} locally owned restaurant${withDistance.length !== 1 ? 's' : ''}`
+      : 'No matches. Try another cuisine or dish.';
   }
 
   function runSearch() {
@@ -75,17 +81,19 @@
       $resultsMeta.textContent = '';
       return;
     }
-    const results = RESTAURANTS
-      .filter(r => matchQuery(r, query))
-      .map(r => ({ ...r, distance: distanceToMiles(r) }))
-      .sort((a, b) => a.distance - b.distance);
-    currentResults = results;
-    renderList(results);
-    updateMapMarkers(results);
-    $emptyState.classList.add('hidden');
-    $resultsMeta.textContent = results.length
-      ? `${results.length} locally owned restaurant${results.length !== 1 ? 's' : ''}`
-      : 'No matches. Try another cuisine or dish.';
+    const center = getCenter();
+    const apiUrl = `/api/restaurants?q=${encodeURIComponent(query)}&lat=${center[0]}&lng=${center[1]}`;
+    fetch(apiUrl)
+      .then((res) => (res.ok ? res.json() : Promise.reject(new Error('API error'))))
+      .then((list) => applyResults(list))
+      .catch(() => {
+        currentResults = [];
+        renderList([]);
+        updateMapMarkers([]);
+        $emptyState.classList.remove('hidden');
+        $emptyState.innerHTML = '<p>Start the server to search restaurants: <code>npm start</code>, then open <a href="http://localhost:3001">http://localhost:3001</a>.</p>';
+        $resultsMeta.textContent = '';
+      });
   }
 
   function formatDistance(miles) {
@@ -96,16 +104,19 @@
 
   function renderList(results) {
     $restaurantList.innerHTML = '';
+    $emptyState.innerHTML = '<p>Search for a type of food to see locally owned spots near you.</p>';
     results.forEach((r, index) => {
       const li = document.createElement('li');
       li.className = 'restaurant-card';
       li.dataset.id = r.id;
+      const address = (r.address || '').trim();
       li.innerHTML = `
         <h3 class="restaurant-name">${escapeHtml(r.name)}</h3>
         <p class="restaurant-meta">
           <span>${escapeHtml(r.price)}</span>
           <span>${formatDistance(r.distance)}</span>
         </p>
+        ${address ? `<p class="restaurant-address">${escapeHtml(address)}</p>` : ''}
         <p class="restaurant-cuisine">${escapeHtml(r.cuisine)}</p>
       `;
       li.addEventListener('click', () => focusRestaurant(r, index));
@@ -133,10 +144,12 @@
     markers = [];
     if (!map) return;
     results.forEach((r, index) => {
-      const marker = L.marker([r.lat, r.lng])
+      const address = (r.address || '').trim();
+      const marker = L.marker([r.lat, r.lng], { icon: getRestaurantIcon(r.price) })
         .addTo(map)
         .bindPopup(`
           <div class="popup-name">${escapeHtml(r.name)}</div>
+          ${address ? `<p class="popup-address">${escapeHtml(address)}</p>` : ''}
           <p class="popup-meta">${escapeHtml(r.cuisine)} · ${escapeHtml(r.price)} · ${formatDistance(r.distance)}</p>
         `);
       marker.on('click', () => {
@@ -154,6 +167,14 @@
     }
   }
 
+  function updateUserMarker() {
+    if (!map || !userLocation) return;
+    if (userMarker) map.removeLayer(userMarker);
+    userMarker = L.marker([userLocation.lat, userLocation.lng], { icon: userLocationIcon })
+      .addTo(map)
+      .bindPopup('You are here');
+  }
+
   function initMap() {
     const center = getCenter();
     map = L.map('map').setView(center, DEFAULT_ZOOM);
@@ -162,12 +183,7 @@
       subdomains: 'abcd',
       maxZoom: 20
     }).addTo(map);
-    if (userLocation) {
-      L.marker([userLocation.lat, userLocation.lng])
-        .addTo(map)
-        .bindPopup('You are here')
-        .openPopup();
-    }
+    if (userLocation) updateUserMarker();
   }
 
   function onGeolocationSuccess(position) {
@@ -179,9 +195,7 @@
     $locationStatus.classList.add('success');
     if (map) {
       map.setView([userLocation.lat, userLocation.lng], DEFAULT_ZOOM);
-      L.marker([userLocation.lat, userLocation.lng])
-        .addTo(map)
-        .bindPopup('You are here');
+      updateUserMarker();
     }
     if (currentResults.length) {
       currentResults = currentResults.map(r => ({

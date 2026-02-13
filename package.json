@@ -1,0 +1,15 @@
+{
+  "name": "scran-it",
+  "version": "1.0.0",
+  "description": "Locally owned restaurants near you",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "seed": "node server/seed.js",
+    "dev": "node server/index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0"
+  }
+}

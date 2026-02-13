@@ -213,6 +213,12 @@ body {
   gap: 0.25rem;
 }
 
+.restaurant-address {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0.15rem 0 0;
+}
+
 .restaurant-cuisine {
   font-size: 0.8rem;
   color: var(--sage);
@@ -243,6 +249,41 @@ body {
   min-height: 400px;
 }
 
+/* Map pins: user vs restaurant, color by price */
+.map-pin {
+  background: none !important;
+  border: none !important;
+}
+
+.map-pin-user {
+  margin-left: -7px !important;
+  margin-top: -7px !important;
+}
+
+.map-pin-user-dot {
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #2563eb;
+  border: 2px solid #fff;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.3);
+}
+
+.map-pin-restaurant {
+  margin-left: -11px !important;
+  margin-top: -11px !important;
+}
+
+.map-pin-restaurant-dot {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.25);
+}
+
 /* Leaflet overrides for theme */
 .leaflet-popup-content-wrapper {
   border-radius: var(--radius-sm);
@@ -259,6 +300,12 @@ body {
   font-weight: 600;
   margin: 0 0 0.25rem;
   color: var(--ink);
+}
+
+.popup-address {
+  font-size: 0.85rem;
+  color: var(--ink);
+  margin: 0 0 0.25rem;
 }
 
 .popup-meta {
