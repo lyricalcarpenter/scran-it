@@ -1,0 +1,2509 @@
+[
+  {
+    "name": "54th Street",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "7 Leaves Cafe",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "coffee_shop",
+      "vietnamese"
+    ]
+  },
+  {
+    "name": "85°C",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "chinese",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "A&W",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Applebee's",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Arby's",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Auntie Anne's",
+    "cuisine": "pretzel",
+    "types": [
+      "fast food",
+      "pretzel"
+    ]
+  },
+  {
+    "name": "Bahama Buck's",
+    "cuisine": "ice_cream",
+    "types": [
+      "cafe",
+      "dessert",
+      "ice_cream",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Bambu",
+    "cuisine": "vietnamese",
+    "types": [
+      "bubble_tea",
+      "cafe",
+      "vietnamese"
+    ]
+  },
+  {
+    "name": "Basil Thai",
+    "cuisine": "thai",
+    "types": [
+      "fast food",
+      "restaurant",
+      "thai"
+    ]
+  },
+  {
+    "name": "bb.q Chicken",
+    "cuisine": "korean",
+    "types": [
+      "chicken",
+      "korean",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Becks Prime",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Bellagreen",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Benihana",
+    "cuisine": "japanese",
+    "types": [
+      "japanese",
+      "restaurant",
+      "steak",
+      "teppanyaki"
+    ]
+  },
+  {
+    "name": "Bill Miller Bar-B-Q",
+    "cuisine": "barbecue",
+    "types": [
+      "barbecue",
+      "chicken",
+      "dessert",
+      "fast food",
+      "regional",
+      "restaurant",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Bill Miller BBQ",
+    "cuisine": "Restaurant",
+    "types": [
+      "fast food",
+      "regional",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Bill Miller's BBQ",
+    "cuisine": "barbecue",
+    "types": [
+      "american",
+      "barbecue",
+      "chicken",
+      "fast food",
+      "restaurant",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Biryani Pot",
+    "cuisine": "indian",
+    "types": [
+      "hyderabadi",
+      "indian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "BJ's",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Black Sheep Coffee",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "Black Walnut Cafe",
+    "cuisine": "Restaurant",
+    "types": [
+      "cafe",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Blaze Pizza",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Blue Sushi Sake Grill",
+    "cuisine": "sushi",
+    "types": [
+      "restaurant",
+      "sushi"
+    ]
+  },
+  {
+    "name": "Bombshells",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "burger",
+      "grill",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Bonchon Chicken",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "korean",
+      "restaurant",
+      "sushi"
+    ]
+  },
+  {
+    "name": "Boston Market",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Bubba's 33",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Buffalo Wild Wings",
+    "cuisine": "wings",
+    "types": [
+      "american",
+      "restaurant",
+      "wings"
+    ]
+  },
+  {
+    "name": "Burger King",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "BurgerFi",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Bush's Chicken",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Cabo Bob's",
+    "cuisine": "Restaurant",
+    "types": [
+      "fast food",
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "California Pizza Kitchen",
+    "cuisine": "pizza",
+    "types": [
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Cane Rosso",
+    "cuisine": "pizza",
+    "types": [
+      "italian",
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Cantina Laredo",
+    "cuisine": "Restaurant",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Caribou Coffee",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "Carrabba's Italian Grill",
+    "cuisine": "italian",
+    "types": [
+      "italian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "CAVA",
+    "cuisine": "Restaurant",
+    "types": [
+      "fast food",
+      "mediterranean",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Chacho's",
+    "cuisine": "mexican",
+    "types": [
+      "fast food",
+      "mexican",
+      "restaurant",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Charleys Philly Steaks",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Cheddar's",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Chick-fil-A",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Chicken Express",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Chicken Salad Chick",
+    "cuisine": "sandwich",
+    "types": [
+      "chicken",
+      "fast food",
+      "restaurant",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Chili's",
+    "cuisine": "tex-mex",
+    "types": [
+      "restaurant",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "China Star",
+    "cuisine": "Restaurant",
+    "types": [
+      "chinese",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Chipotle",
+    "cuisine": "mexican",
+    "types": [
+      "fast food",
+      "mexican"
+    ]
+  },
+  {
+    "name": "Chuck E. Cheese",
+    "cuisine": "pizza",
+    "types": [
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Chuck E. Cheese's",
+    "cuisine": "pizza",
+    "types": [
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Church's Chicken",
+    "cuisine": "chicken",
+    "types": [
+      "cafe",
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Chuy's",
+    "cuisine": "tex-mex",
+    "types": [
+      "restaurant",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Cici's Pizza",
+    "cuisine": "pizza",
+    "types": [
+      "buffet",
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Cicis",
+    "cuisine": "pizza",
+    "types": [
+      "buffet",
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Cinnabon",
+    "cuisine": "dessert",
+    "types": [
+      "dessert",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Clean Juice",
+    "cuisine": "juice",
+    "types": [
+      "fast food",
+      "juice"
+    ]
+  },
+  {
+    "name": "Corner Bakery",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "Cracker Barrel",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Crown Donuts",
+    "cuisine": "Restaurant",
+    "types": [
+      "donut",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Culver's",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Dairy Queen",
+    "cuisine": "ice_cream",
+    "types": [
+      "american",
+      "burger",
+      "chicken",
+      "fast food",
+      "ice_cream",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Dave & Buster's",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Dave's Hot Chicken",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Denny's",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Dimassi's Mediterranean Buffet",
+    "cuisine": "mediterranean",
+    "types": [
+      "buffet",
+      "greek",
+      "mediterranean",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Dish Society",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Domino's",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Donut Palace",
+    "cuisine": "donut",
+    "types": [
+      "breakfast",
+      "cafe",
+      "coffee_shop",
+      "donut",
+      "fast food"
+    ]
+  },
+  {
+    "name": "DQ Grill & Chill",
+    "cuisine": "ice_cream",
+    "types": [
+      "burger",
+      "chicken",
+      "fast food",
+      "ice_cream"
+    ]
+  },
+  {
+    "name": "Dragon Express",
+    "cuisine": "chinese",
+    "types": [
+      "chinese",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Dunkin'",
+    "cuisine": "donut",
+    "types": [
+      "coffee_shop",
+      "donut",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Dunkin' Donuts",
+    "cuisine": "donut",
+    "types": [
+      "coffee_shop",
+      "donut",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Dutch Bros. Coffee",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "Eddie V's",
+    "cuisine": "Restaurant",
+    "types": [
+      "restaurant",
+      "seafood",
+      "steak"
+    ]
+  },
+  {
+    "name": "Einstein Bros. Bagels",
+    "cuisine": "bagel",
+    "types": [
+      "bagel",
+      "fast food"
+    ]
+  },
+  {
+    "name": "El Meson",
+    "cuisine": "mexican",
+    "types": [
+      "latin_american",
+      "mexican",
+      "restaurant",
+      "spanish"
+    ]
+  },
+  {
+    "name": "El Pollo Loco",
+    "cuisine": "mexican",
+    "types": [
+      "fast food",
+      "mexican"
+    ]
+  },
+  {
+    "name": "El Rincon",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Fajita Pete's",
+    "cuisine": "tex-mex",
+    "types": [
+      "fast food",
+      "mexican",
+      "restaurant",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Fat Tuesday",
+    "cuisine": "Cafe",
+    "types": [
+      "cafe",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Feng Cha",
+    "cuisine": "bubble_tea",
+    "types": [
+      "bubble_tea",
+      "cafe"
+    ]
+  },
+  {
+    "name": "Firehouse Subs",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "First Watch",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "breakfast",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Five Guys",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Flower Child",
+    "cuisine": "Restaurant",
+    "types": [
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Fogo de Chão",
+    "cuisine": "brazilian",
+    "types": [
+      "brazilian",
+      "restaurant",
+      "steak_house"
+    ]
+  },
+  {
+    "name": "Freddy's",
+    "cuisine": "ice_cream",
+    "types": [
+      "burger",
+      "fast food",
+      "ice_cream"
+    ]
+  },
+  {
+    "name": "Freebirds",
+    "cuisine": "mexican",
+    "types": [
+      "fast food",
+      "mexican"
+    ]
+  },
+  {
+    "name": "Fresh Donuts",
+    "cuisine": "donut",
+    "types": [
+      "donut",
+      "fast food",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Fuddruckers",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Gen Korean BBQ",
+    "cuisine": "korean",
+    "types": [
+      "barbecue",
+      "korean",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Gloria's Latin Cuisine",
+    "cuisine": "latin_american",
+    "types": [
+      "latin_american",
+      "mexican",
+      "restaurant",
+      "salvadoran",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Golden Chick",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Golden Corral",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "buffet",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Gong Cha",
+    "cuisine": "bubble_tea",
+    "types": [
+      "bubble_tea",
+      "cafe"
+    ]
+  },
+  {
+    "name": "Grand Lux Cafe",
+    "cuisine": "Restaurant",
+    "types": [
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Great American Cookies",
+    "cuisine": "cookies",
+    "types": [
+      "cookie",
+      "cookies",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Griff's Hamburgers",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Gus' Fried Chicken",
+    "cuisine": "wings",
+    "types": [
+      "american",
+      "chicken",
+      "restaurant",
+      "wings"
+    ]
+  },
+  {
+    "name": "Gyu-Kaku",
+    "cuisine": "japanese",
+    "types": [
+      "barbecue",
+      "japanese",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Halcyon",
+    "cuisine": "coffee_shop",
+    "types": [
+      "american",
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "Happy Lemon",
+    "cuisine": "bubble_tea",
+    "types": [
+      "bubble_tea",
+      "cafe"
+    ]
+  },
+  {
+    "name": "Hard Rock Cafe",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Hat Creek Burger Co.",
+    "cuisine": "Restaurant",
+    "types": [
+      "fast food"
+    ]
+  },
+  {
+    "name": "Hat Creek Burger Company",
+    "cuisine": "Restaurant",
+    "types": [
+      "burger",
+      "chicken",
+      "fast food",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Hawaiian Bros",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food",
+      "hawaiian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Home Slice Pizza",
+    "cuisine": "pizza",
+    "types": [
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Hooters",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Hopdoddy Burger Bar",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food",
+      "organic",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Houndstooth",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "House of Blues",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Hui Lau Shan",
+    "cuisine": "asian",
+    "types": [
+      "asian",
+      "cafe",
+      "dessert"
+    ]
+  },
+  {
+    "name": "i Fratelli Pizza",
+    "cuisine": "pizza",
+    "types": [
+      "dessert",
+      "fast food",
+      "fast_food",
+      "italian",
+      "italian_pizza",
+      "pizza",
+      "restaurant",
+      "salad"
+    ]
+  },
+  {
+    "name": "Ichiban",
+    "cuisine": "sushi",
+    "types": [
+      "chinese",
+      "japanese",
+      "restaurant",
+      "sushi"
+    ]
+  },
+  {
+    "name": "Ida Claire",
+    "cuisine": "regional",
+    "types": [
+      "american",
+      "regional",
+      "restaurant",
+      "southern"
+    ]
+  },
+  {
+    "name": "IHOP",
+    "cuisine": "breakfast",
+    "types": [
+      "breakfast",
+      "pancake",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "In-N-Out Burger",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Jack in the Box",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Jalisco Taqueria",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Jamba",
+    "cuisine": "juice",
+    "types": [
+      "fast food",
+      "juice"
+    ]
+  },
+  {
+    "name": "Jason's Deli",
+    "cuisine": "sandwich",
+    "types": [
+      "restaurant",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Jersey Mike's Subs",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "restaurant",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Jim's",
+    "cuisine": "Restaurant",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Jim's Restaurant",
+    "cuisine": "Restaurant",
+    "types": [
+      "american",
+      "breakfast",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Jimmy John's",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "JINYA Ramen Bar",
+    "cuisine": "ramen",
+    "types": [
+      "ramen",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Joe's Crab Shack",
+    "cuisine": "seafood",
+    "types": [
+      "restaurant",
+      "seafood"
+    ]
+  },
+  {
+    "name": "Jollibee",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "JuiceLand",
+    "cuisine": "juice",
+    "types": [
+      "cafe",
+      "fast food",
+      "juice",
+      "smoothie"
+    ]
+  },
+  {
+    "name": "KFC",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Kobe Japanese Steakhouse",
+    "cuisine": "Restaurant",
+    "types": [
+      "japanese",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Kolache Factory",
+    "cuisine": "Cafe",
+    "types": [
+      "cafe",
+      "fast food",
+      "kolache",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Korea House",
+    "cuisine": "korean",
+    "types": [
+      "korean",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Krispy Kreme",
+    "cuisine": "donut",
+    "types": [
+      "donut",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Krispy Krunchy Chicken",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Kung Fu Tea",
+    "cuisine": "bubble_tea",
+    "types": [
+      "bubble_tea",
+      "cafe"
+    ]
+  },
+  {
+    "name": "Kura Sushi",
+    "cuisine": "sushi",
+    "types": [
+      "fast food",
+      "sushi"
+    ]
+  },
+  {
+    "name": "La La Land Kind Cafe",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "la Madeleine",
+    "cuisine": "french",
+    "types": [
+      "cafe",
+      "fast food",
+      "french",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "La Madeline",
+    "cuisine": "french",
+    "types": [
+      "french",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "La Tapatia",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Lazy Dog",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Little Caesars",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Little Caesars Pizza",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Local Foods",
+    "cuisine": "sandwich",
+    "types": [
+      "american",
+      "restaurant",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Logan's Roadhouse",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Long John Silver's",
+    "cuisine": "seafood",
+    "types": [
+      "fast food",
+      "seafood"
+    ]
+  },
+  {
+    "name": "LongHorn Steakhouse",
+    "cuisine": "steak_house",
+    "types": [
+      "restaurant",
+      "steak_house"
+    ]
+  },
+  {
+    "name": "Loro",
+    "cuisine": "Restaurant",
+    "types": [
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Luby's",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Lupe Tortilla",
+    "cuisine": "tex-mex",
+    "types": [
+      "mexican",
+      "restaurant",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Maggiano's Little Italy",
+    "cuisine": "italian",
+    "types": [
+      "italian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Magic Cup",
+    "cuisine": "tea",
+    "types": [
+      "bubble_tea",
+      "cafe",
+      "coffee",
+      "coffee_shop",
+      "smoothie",
+      "tea"
+    ]
+  },
+  {
+    "name": "Magic Time Machine",
+    "cuisine": "Restaurant",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Marco's Pizza",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Masala Wok",
+    "cuisine": "asian",
+    "types": [
+      "asian",
+      "chinese",
+      "indian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "McAlister's Deli",
+    "cuisine": "sandwich",
+    "types": [
+      "restaurant",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "McCormick & Schmick's",
+    "cuisine": "seafood",
+    "types": [
+      "restaurant",
+      "seafood",
+      "steak"
+    ]
+  },
+  {
+    "name": "McDonald's",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Mendocino Farms",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Merit Coffee",
+    "cuisine": "Cafe",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "Mi Casa",
+    "cuisine": "Restaurant",
+    "types": [
+      "fast food",
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Mi Cocina",
+    "cuisine": "Restaurant",
+    "types": [
+      "mexican",
+      "restaurant",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "MOD Pizza",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Modern Market",
+    "cuisine": "Restaurant",
+    "types": [
+      "american",
+      "pizza",
+      "restaurant",
+      "salad",
+      "sandwich",
+      "soup"
+    ]
+  },
+  {
+    "name": "Möge Tee",
+    "cuisine": "bubble_tea",
+    "types": [
+      "bubble_tea",
+      "cafe"
+    ]
+  },
+  {
+    "name": "Nando's",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "portuguese",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Nestlé Toll House Café",
+    "cuisine": "dessert",
+    "types": [
+      "dessert",
+      "fast food"
+    ]
+  },
+  {
+    "name": "North Italia",
+    "cuisine": "Restaurant",
+    "types": [
+      "italian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Oishii",
+    "cuisine": "sushi",
+    "types": [
+      "asian",
+      "restaurant",
+      "sushi"
+    ]
+  },
+  {
+    "name": "Ojos Locos Sports Cantina",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Olive Garden",
+    "cuisine": "italian",
+    "types": [
+      "italian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Outback Steakhouse",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant",
+      "steak"
+    ]
+  },
+  {
+    "name": "P. Terry's",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "P.F. Chang's",
+    "cuisine": "asian",
+    "types": [
+      "asian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Pad Thai",
+    "cuisine": "thai",
+    "types": [
+      "restaurant",
+      "thai"
+    ]
+  },
+  {
+    "name": "Panda Express",
+    "cuisine": "chinese",
+    "types": [
+      "asian",
+      "chinese",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Panera Bread",
+    "cuisine": "sandwich",
+    "types": [
+      "bakery",
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Papa John's",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Papa Murphy's",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Pappadeaux",
+    "cuisine": "Restaurant",
+    "types": [
+      "fast food",
+      "restaurant",
+      "seafood"
+    ]
+  },
+  {
+    "name": "Pappadeaux Seafood Kitchen",
+    "cuisine": "seafood",
+    "types": [
+      "cajun",
+      "restaurant",
+      "seafood"
+    ]
+  },
+  {
+    "name": "Pappas Bar-B-Q",
+    "cuisine": "Restaurant",
+    "types": [
+      "barbecue",
+      "fast food",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Pappas Bros. Steakhouse",
+    "cuisine": "steak_house",
+    "types": [
+      "restaurant",
+      "steak_house"
+    ]
+  },
+  {
+    "name": "Pappasito's Cantina",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Pappasitos",
+    "cuisine": "Restaurant",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Pei Wei",
+    "cuisine": "asian",
+    "types": [
+      "asian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Peter Piper Pizza",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Piada Italian Street Food",
+    "cuisine": "italian",
+    "types": [
+      "fast food",
+      "italian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Pizza Hut",
+    "cuisine": "pizza",
+    "types": [
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Pizza Hut Delivery",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Pizza inn",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Pizza Patrón",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Pizza Patron",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Pizza Twist",
+    "cuisine": "Restaurant",
+    "types": [
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "PJ's Coffee",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "Pluckers Wing Bar",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "burger",
+      "chicken",
+      "dessert",
+      "fast food",
+      "grill",
+      "restaurant",
+      "salad",
+      "sandwich",
+      "wings"
+    ]
+  },
+  {
+    "name": "Pokéworks",
+    "cuisine": "hawaiian",
+    "types": [
+      "hawaiian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Pokeworks",
+    "cuisine": "sushi",
+    "types": [
+      "fast food",
+      "poke",
+      "restaurant",
+      "sushi"
+    ]
+  },
+  {
+    "name": "Pollo Campero",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food",
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Pollo Regio",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food",
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Popeyes",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Postino",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Potbelly",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Pressed Juicery",
+    "cuisine": "juice",
+    "types": [
+      "fast food",
+      "juice"
+    ]
+  },
+  {
+    "name": "Quiznos",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "R&B Tea",
+    "cuisine": "bubble_tea",
+    "types": [
+      "bubble_tea",
+      "cafe"
+    ]
+  },
+  {
+    "name": "RA Sushi",
+    "cuisine": "sushi",
+    "types": [
+      "restaurant",
+      "sushi"
+    ]
+  },
+  {
+    "name": "Rainforest Cafe",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Raising Cane's",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Raising Cane's Chicken Fingers",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Ramen Tatsu-Ya",
+    "cuisine": "ramen",
+    "types": [
+      "japanese",
+      "noodle",
+      "ramen",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Red Lobster",
+    "cuisine": "seafood",
+    "types": [
+      "restaurant",
+      "seafood"
+    ]
+  },
+  {
+    "name": "Red Robin",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Rodeo Goat",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Rudy's Country Store & Bar-B-Q",
+    "cuisine": "barbecue",
+    "types": [
+      "barbecue",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Rush Bowls",
+    "cuisine": "açaí",
+    "types": [
+      "açaí",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Russo's New York Pizza",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Ruth's Chris Steak House",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant",
+      "steak_house"
+    ]
+  },
+  {
+    "name": "Salata",
+    "cuisine": "Restaurant",
+    "types": [
+      "fast food",
+      "restaurant",
+      "salad"
+    ]
+  },
+  {
+    "name": "Salsa Limón",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Saltgrass Steak House",
+    "cuisine": "steak_house",
+    "types": [
+      "restaurant",
+      "steak_house"
+    ]
+  },
+  {
+    "name": "Sarpino's Pizzeria",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Sbarro",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza"
+    ]
+  },
+  {
+    "name": "Schlotzsky's",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Seoul Garden",
+    "cuisine": "korean",
+    "types": [
+      "korean",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Shake Shack",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Sharetea",
+    "cuisine": "bubble_tea",
+    "types": [
+      "bubble_tea",
+      "cafe"
+    ]
+  },
+  {
+    "name": "Shipley Do-Nuts",
+    "cuisine": "donut",
+    "types": [
+      "cafe",
+      "donut",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Shipley Donuts",
+    "cuisine": "donut",
+    "types": [
+      "cafe",
+      "donut",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Shoo Loong Kan",
+    "cuisine": "chinese",
+    "types": [
+      "chinese",
+      "hot_pot",
+      "hotpot",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Sichuan Garden",
+    "cuisine": "chinese",
+    "types": [
+      "asian",
+      "chinese",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Signature Cafe",
+    "cuisine": "Cafe",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "Sixty Vines",
+    "cuisine": "Restaurant",
+    "types": [
+      "american",
+      "pizza",
+      "restaurant",
+      "sandwich",
+      "wine_bar"
+    ]
+  },
+  {
+    "name": "Smashburger",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Smoothie King",
+    "cuisine": "juice",
+    "types": [
+      "fast food",
+      "juice"
+    ]
+  },
+  {
+    "name": "Snap Kitchen",
+    "cuisine": "Restaurant",
+    "types": [
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Snooze",
+    "cuisine": "breakfast",
+    "types": [
+      "breakfast",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Sonic",
+    "cuisine": "burger",
+    "types": [
+      "american",
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Starbucks",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "Subway",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Sweetgreen",
+    "cuisine": "salad",
+    "types": [
+      "beef_bowl",
+      "chicken",
+      "fast food",
+      "fish",
+      "restaurant",
+      "salad"
+    ]
+  },
+  {
+    "name": "Taco Bell",
+    "cuisine": "tex-mex",
+    "types": [
+      "fast food",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Taco Cabana",
+    "cuisine": "mexican",
+    "types": [
+      "fast food",
+      "mexican"
+    ]
+  },
+  {
+    "name": "Taco Joint",
+    "cuisine": "tacos",
+    "types": [
+      "mexican",
+      "restaurant",
+      "tacos"
+    ]
+  },
+  {
+    "name": "Taco Palenque",
+    "cuisine": "tex-mex",
+    "types": [
+      "fast food",
+      "mexican",
+      "restaurant",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Tacodeli",
+    "cuisine": "mexican",
+    "types": [
+      "fast food",
+      "mexican",
+      "restaurant",
+      "tacqueria",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Tacos Y Mas",
+    "cuisine": "Restaurant",
+    "types": [
+      "fast food",
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Taqueria Arandas",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Taqueria El Paisano",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Taqueria Guadalajara",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Taquerias Arandas",
+    "cuisine": "mexican",
+    "types": [
+      "mexican",
+      "restaurant",
+      "tacos"
+    ]
+  },
+  {
+    "name": "Tarka Indian Kitchen",
+    "cuisine": "indian",
+    "types": [
+      "fast food",
+      "indian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Taverna",
+    "cuisine": "italian",
+    "types": [
+      "italian",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Texadelphia",
+    "cuisine": "Restaurant",
+    "types": [
+      "american",
+      "barbecue",
+      "fast food",
+      "restaurant",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Texas de Brazil",
+    "cuisine": "brazilian",
+    "types": [
+      "barbecue",
+      "brazilian",
+      "restaurant",
+      "steak_house"
+    ]
+  },
+  {
+    "name": "Texas Roadhouse",
+    "cuisine": "steak_house",
+    "types": [
+      "restaurant",
+      "steak_house"
+    ]
+  },
+  {
+    "name": "The Alley",
+    "cuisine": "bubble_tea",
+    "types": [
+      "bubble_tea",
+      "cafe"
+    ]
+  },
+  {
+    "name": "The Catch",
+    "cuisine": "seafood",
+    "types": [
+      "restaurant",
+      "seafood"
+    ]
+  },
+  {
+    "name": "The Cheesecake Factory",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "The Grove",
+    "cuisine": "Restaurant",
+    "types": [
+      "restaurant",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "The Halal Guys",
+    "cuisine": "chicken",
+    "types": [
+      "arab",
+      "chicken",
+      "falafel",
+      "fast food",
+      "gyros",
+      "mediterranean",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "The Human Bean",
+    "cuisine": "coffee_shop",
+    "types": [
+      "cafe",
+      "coffee_shop"
+    ]
+  },
+  {
+    "name": "The Melting Pot",
+    "cuisine": "fondue",
+    "types": [
+      "fondue",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "The Original Pancake House",
+    "cuisine": "breakfast",
+    "types": [
+      "breakfast",
+      "pancake",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "The Rustic",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "The Well",
+    "cuisine": "Restaurant",
+    "types": [
+      "burger",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Toasted Yolk",
+    "cuisine": "Restaurant",
+    "types": [
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Torchy's Tacos",
+    "cuisine": "tex-mex",
+    "types": [
+      "fast food",
+      "mexican",
+      "restaurant",
+      "tacos",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Toulouse",
+    "cuisine": "Restaurant",
+    "types": [
+      "bistro",
+      "french",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Tropical Smoothie Cafe",
+    "cuisine": "juice",
+    "types": [
+      "fast food",
+      "juice"
+    ]
+  },
+  {
+    "name": "True Food Kitchen",
+    "cuisine": "Restaurant",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Truluck's",
+    "cuisine": "seafood",
+    "types": [
+      "restaurant",
+      "seafood",
+      "steak_house"
+    ]
+  },
+  {
+    "name": "Twin Peaks",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Two Hands",
+    "cuisine": "corn_dog",
+    "types": [
+      "corn_dog",
+      "fast food",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Uchi",
+    "cuisine": "japanese",
+    "types": [
+      "japanese",
+      "restaurant",
+      "sushi"
+    ]
+  },
+  {
+    "name": "Velvet Taco",
+    "cuisine": "Restaurant",
+    "types": [
+      "fast food",
+      "mexican",
+      "restaurant",
+      "tacos",
+      "tex-mex"
+    ]
+  },
+  {
+    "name": "Via 313",
+    "cuisine": "pizza",
+    "types": [
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Waffle House",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Wendy's",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Whataburger",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Which Wich?",
+    "cuisine": "sandwich",
+    "types": [
+      "fast food",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Wienerschnitzel",
+    "cuisine": "hot_dog",
+    "types": [
+      "fast food",
+      "hot_dog"
+    ]
+  },
+  {
+    "name": "Willie's Grill & Icehouse",
+    "cuisine": "burger",
+    "types": [
+      "burger",
+      "restaurant",
+      "sandwich"
+    ]
+  },
+  {
+    "name": "Wing Daddy's Sauce House",
+    "cuisine": "wings",
+    "types": [
+      "fast food",
+      "restaurant",
+      "wings"
+    ]
+  },
+  {
+    "name": "Wingstop",
+    "cuisine": "wings",
+    "types": [
+      "fast food",
+      "restaurant",
+      "wings"
+    ]
+  },
+  {
+    "name": "Yard House",
+    "cuisine": "american",
+    "types": [
+      "american",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Zalat Pizza",
+    "cuisine": "pizza",
+    "types": [
+      "fast food",
+      "pizza",
+      "restaurant"
+    ]
+  },
+  {
+    "name": "Zaxby's",
+    "cuisine": "chicken",
+    "types": [
+      "chicken",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Zero Degrees",
+    "cuisine": "asian_fusion",
+    "types": [
+      "asian_fusion",
+      "fast food"
+    ]
+  },
+  {
+    "name": "Zoës Kitchen",
+    "cuisine": "mediterranean",
+    "types": [
+      "fast food",
+      "mediterranean"
+    ]
+  }
+]
