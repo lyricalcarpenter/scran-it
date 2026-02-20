@@ -186,6 +186,28 @@
     if (userLocation) updateUserMarker();
   }
 
+  function loadNearbyRestaurants() {
+    if (!userLocation) return;
+    const apiUrl = `/api/restaurants/nearby?lat=${userLocation.lat}&lng=${userLocation.lng}&maxMiles=1&limit=10`;
+    fetch(apiUrl)
+      .then((res) => (res.ok ? res.json() : Promise.reject(new Error('API error'))))
+      .then((list) => {
+        if (list.length) {
+          applyResults(list);
+        } else {
+          currentResults = [];
+          renderList([]);
+          updateMapMarkers([]);
+          $emptyState.classList.remove('hidden');
+          $emptyState.innerHTML = '<p>No restaurants within 1 mile. Search for a type of food to see more.</p>';
+          $resultsMeta.textContent = '';
+        }
+      })
+      .catch(() => {
+        // Server may not be running; leave empty state as-is
+      });
+  }
+
   function onGeolocationSuccess(position) {
     userLocation = {
       lat: position.coords.latitude,
@@ -203,6 +225,8 @@
         distance: distanceToMiles(r)
       })).sort((a, b) => a.distance - b.distance);
       renderList(currentResults);
+    } else {
+      loadNearbyRestaurants();
     }
   }
 

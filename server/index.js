@@ -10,6 +10,20 @@ const dataDir = path.join(__dirname, '..', 'data');
 const restaurantsFile = path.join(dataDir, 'restaurants.json');
 const chainsFile = path.join(dataDir, 'chain_restaurants.json');
 
+function haversineMiles(lat1, lon1, lat2, lon2) {
+  const R = 3959;
+  const dLat = ((lat2 - lat1) * Math.PI) / 180;
+  const dLon = ((lon2 - lon1) * Math.PI) / 180;
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos((lat1 * Math.PI) / 180) *
+      Math.cos((lat2 * Math.PI) / 180) *
+      Math.sin(dLon / 2) *
+      Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+}
+
 function loadRestaurants() {
   try {
     const raw = fs.readFileSync(restaurantsFile, 'utf8');
@@ -88,6 +102,29 @@ app.get('/api/restaurants', (req, res) => {
   }
 
   res.json(results);
+});
+
+app.get('/api/restaurants/nearby', (req, res) => {
+  const lat = parseFloat(req.query.lat);
+  const lng = parseFloat(req.query.lng);
+  const maxMiles = Math.min(Math.max(parseFloat(req.query.maxMiles) || 1, 0.1), 25);
+  const limit = Math.min(Math.max(parseInt(req.query.limit, 10) || 10, 1), 20);
+
+  if (Number.isNaN(lat) || Number.isNaN(lng)) {
+    return res.status(400).json({ error: 'lat and lng are required' });
+  }
+
+  const all = loadRestaurants();
+  const withDistance = all
+    .map((r) => ({
+      ...r,
+      distance: haversineMiles(lat, lng, r.lat, r.lng),
+    }))
+    .filter((r) => r.distance <= maxMiles)
+    .sort((a, b) => a.distance - b.distance)
+    .slice(0, limit);
+
+  res.json(withDistance);
 });
 
 app.listen(PORT, () => {
