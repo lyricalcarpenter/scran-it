@@ -102,6 +102,11 @@
     return `${miles.toFixed(1)} mi`;
   }
 
+  function getRestaurantPhotoUrl(r) {
+    if (r.photo && (r.photo || '').trim()) return (r.photo || '').trim();
+    return `https://picsum.photos/seed/${encodeURIComponent(String(r.id))}/96/96`;
+  }
+
   function renderList(results) {
     $restaurantList.innerHTML = '';
     $emptyState.innerHTML = '<p>Search for a type of food to see locally owned spots near you.</p>';
@@ -110,15 +115,27 @@
       li.className = 'restaurant-card';
       li.dataset.id = r.id;
       const address = (r.address || '').trim();
+      const photoUrl = getRestaurantPhotoUrl(r);
       li.innerHTML = `
-        <h3 class="restaurant-name">${escapeHtml(r.name)}</h3>
-        <p class="restaurant-meta">
-          <span>${escapeHtml(r.price)}</span>
-          <span>${formatDistance(r.distance)}</span>
-        </p>
-        ${address ? `<p class="restaurant-address">${escapeHtml(address)}</p>` : ''}
-        <p class="restaurant-cuisine">${escapeHtml(r.cuisine)}</p>
+        <div class="restaurant-card-inner">
+          <div class="restaurant-card-photo">
+            <img src="${photoUrl.replace(/"/g, '&quot;')}" alt="" loading="lazy" referrerpolicy="no-referrer">
+          </div>
+          <div class="restaurant-card-body">
+            <h3 class="restaurant-name">${escapeHtml(r.name)}</h3>
+            <p class="restaurant-meta">
+              <span>${escapeHtml(r.price)}</span>
+              <span>${formatDistance(r.distance)}</span>
+            </p>
+            ${address ? `<p class="restaurant-address">${escapeHtml(address)}</p>` : ''}
+            <p class="restaurant-cuisine">${escapeHtml(r.cuisine)}</p>
+          </div>
+        </div>
       `;
+      const img = li.querySelector('.restaurant-card-photo img');
+      img.addEventListener('error', () => {
+        img.src = `https://picsum.photos/seed/fallback-${r.id}/96/96`;
+      });
       li.addEventListener('click', () => focusRestaurant(r, index));
       $restaurantList.appendChild(li);
     });

@@ -15,9 +15,29 @@
     <header class="header">
       <h1 class="logo">Scran.it</h1>
       <p class="tagline">Locally-owned restaurants in your area</p>
-      <div class="search-wrap">
-        <input type="text" id="search" class="search-input" placeholder="Search cuisine, dish, or restaurant (e.g. Italian, tacos, Chipotle…)" autocomplete="off">
-        <button type="button" id="search-btn" class="search-btn" aria-label="Search">Search</button>
+      <div class="search-row">
+        <div class="search-wrap">
+          <input type="text" id="search" class="search-input" placeholder="Search cuisine, dish, or restaurant (e.g. Italian, tacos, Chipotle…)" autocomplete="off">
+          <button type="button" id="search-btn" class="search-btn" aria-label="Search">Search</button>
+        </div>
+        <div class="map-filters">
+          <span class="map-filters-label">Filters</span>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-distance">Distance</label>
+            <input type="range" id="filter-distance" class="filter-slider" min="1" max="25" value="10" aria-label="Max distance in miles">
+            <span class="filter-value" data-unit="mi">10</span>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-price">Max price</label>
+            <input type="range" id="filter-price" class="filter-slider" min="1" max="4" value="3" aria-label="Maximum price level">
+            <span class="filter-value filter-value-price">$$$</span>
+          </div>
+          <div class="filter-group">
+            <label class="filter-label" for="filter-rating">Min. rating</label>
+            <input type="range" id="filter-rating" class="filter-slider" min="0" max="5" step="0.5" value="0" aria-label="Minimum rating">
+            <span class="filter-value" data-unit="★">Any</span>
+          </div>
+        </div>
       </div>
       <div class="location-status" id="location-status">Getting your location…</div>
     </header>
