@@ -36,6 +36,10 @@
   const $restaurantList = document.getElementById('restaurant-list');
   const $resultsMeta = document.getElementById('results-meta');
   const $emptyState = document.getElementById('empty-state');
+  const $filterDistance = document.getElementById('filter-distance');
+  const $filterPrice = document.getElementById('filter-price');
+  const $filterDistanceValue = document.querySelector('#filter-distance + .filter-value');
+  const $filterPriceValue = document.querySelector('#filter-price + .filter-value');
 
   function haversineDistance(lat1, lon1, lat2, lon2) {
     const R = 3959; // miles
@@ -58,17 +62,42 @@
     return haversineDistance(center[0], center[1], restaurant.lat, restaurant.lng);
   }
 
+  function getPriceLevel(priceStr) {
+    if (!priceStr || typeof priceStr !== 'string') return 4;
+    const len = (priceStr.match(/\$/g) || []).length;
+    return len >= 1 && len <= 4 ? len : 4;
+  }
+
+  function getFilteredResults() {
+    const maxMiles = Number($filterDistance.value) || 3;
+    const maxPriceLevel = Number($filterPrice.value) || 4;
+    return currentResults.filter(r => {
+      if (r.distance > maxMiles) return false;
+      if (getPriceLevel(r.price) > maxPriceLevel) return false;
+      return true;
+    });
+  }
+
+  function applyFilters() {
+    const filtered = getFilteredResults();
+    renderList(filtered);
+    updateMapMarkers(filtered);
+    $emptyState.classList.add('hidden');
+    if (filtered.length === 0 && currentResults.length > 0) {
+      $resultsMeta.textContent = 'No restaurants match the current filters.';
+    } else if (filtered.length === 0) {
+      $resultsMeta.textContent = 'No matches. Try another cuisine or dish.';
+    } else {
+      $resultsMeta.textContent = `${filtered.length} locally owned restaurant${filtered.length !== 1 ? 's' : ''}`;
+    }
+  }
+
   function applyResults(results) {
     const withDistance = results
       .map(r => ({ ...r, distance: distanceToMiles(r) }))
       .sort((a, b) => a.distance - b.distance);
     currentResults = withDistance;
-    renderList(withDistance);
-    updateMapMarkers(withDistance);
-    $emptyState.classList.add('hidden');
-    $resultsMeta.textContent = withDistance.length
-      ? `${withDistance.length} locally owned restaurant${withDistance.length !== 1 ? 's' : ''}`
-      : 'No matches. Try another cuisine or dish.';
+    applyFilters();
   }
 
   function runSearch() {
@@ -269,6 +298,16 @@
     }
     $searchBtn.addEventListener('click', runSearch);
     $search.addEventListener('keydown', (e) => { if (e.key === 'Enter') runSearch(); });
+
+    $filterDistance.addEventListener('input', () => {
+      $filterDistanceValue.textContent = $filterDistance.value + ' mi.';
+      applyFilters();
+    });
+    $filterPrice.addEventListener('input', () => {
+      const level = Number($filterPrice.value) || 1;
+      $filterPriceValue.textContent = '$'.repeat(level);
+      applyFilters();
+    });
   }
 
   init();

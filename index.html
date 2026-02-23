@@ -24,18 +24,13 @@
           <span class="map-filters-label">Filters</span>
           <div class="filter-group">
             <label class="filter-label" for="filter-distance">Distance</label>
-            <input type="range" id="filter-distance" class="filter-slider" min="1" max="25" value="10" aria-label="Max distance in miles">
-            <span class="filter-value" data-unit="mi">10</span>
+            <input type="range" id="filter-distance" class="filter-slider" min="0.1" max="3" step="0.1" value="1.5" aria-label="Max distance in miles">
+            <span class="filter-value" data-unit="mi">1.5 mi.</span>
           </div>
           <div class="filter-group">
             <label class="filter-label" for="filter-price">Max price</label>
             <input type="range" id="filter-price" class="filter-slider" min="1" max="4" value="3" aria-label="Maximum price level">
             <span class="filter-value filter-value-price">$$$</span>
-          </div>
-          <div class="filter-group">
-            <label class="filter-label" for="filter-rating">Min. rating</label>
-            <input type="range" id="filter-rating" class="filter-slider" min="0" max="5" step="0.5" value="0" aria-label="Minimum rating">
-            <span class="filter-value" data-unit="★">Any</span>
           </div>
         </div>
       </div>
