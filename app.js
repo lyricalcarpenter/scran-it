@@ -5,9 +5,13 @@
   const DEFAULT_CENTER = [30.2672, -97.7431];
   const DEFAULT_ZOOM = 13;
 
+  const DISTANCE_RINGS_MILES = [0.2, 0.5, 1, 2, 5, 10];
+  const MILES_TO_METERS = 1609.344;
+
   let userLocation = null;
   let map = null;
   let userMarker = null;
+  let distanceRingLayers = [];
   let markers = [];
   let currentResults = [];
 
@@ -40,6 +44,7 @@
   const $filterPrice = document.getElementById('filter-price');
   const $filterDistanceValue = document.querySelector('#filter-distance + .filter-value');
   const $filterPriceValue = document.querySelector('#filter-price + .filter-value');
+  const $filterRings = document.getElementById('filter-rings');
 
   function haversineDistance(lat1, lon1, lat2, lon2) {
     const R = 3959; // miles
@@ -213,22 +218,100 @@
     }
   }
 
+  const EARTH_RADIUS_METERS = 6371000;
+
+  function bearingFromTo(lat1, lng1, lat2, lng2) {
+    const dLon = ((lng2 - lng1) * Math.PI) / 180;
+    const lat1Rad = (lat1 * Math.PI) / 180;
+    const lat2Rad = (lat2 * Math.PI) / 180;
+    const y = Math.sin(dLon) * Math.cos(lat2Rad);
+    const x = Math.cos(lat1Rad) * Math.sin(lat2Rad) - Math.sin(lat1Rad) * Math.cos(lat2Rad) * Math.cos(dLon);
+    return (Math.atan2(y, x) * 180) / Math.PI;
+  }
+
+  function destinationPoint(lat, lng, bearingDeg, distanceMeters) {
+    const d = distanceMeters / EARTH_RADIUS_METERS;
+    const brng = (bearingDeg * Math.PI) / 180;
+    const lat1Rad = (lat * Math.PI) / 180;
+    const lon1Rad = (lng * Math.PI) / 180;
+    const lat2Rad = Math.asin(Math.sin(lat1Rad) * Math.cos(d) + Math.cos(lat1Rad) * Math.sin(d) * Math.cos(brng));
+    const lon2Rad = lon1Rad + Math.atan2(Math.sin(brng) * Math.sin(d) * Math.cos(lat1Rad), Math.cos(d) - Math.sin(lat1Rad) * Math.sin(lat2Rad));
+    return [lat2Rad * (180 / Math.PI), lon2Rad * (180 / Math.PI)];
+  }
+
+  function pointOnCircleTowardMapCenter(centerLat, centerLng, radiusMeters) {
+    const mapCenter = map.getCenter();
+    const mlat = mapCenter.lat;
+    const mlng = mapCenter.lng;
+    const dist = haversineDistance(centerLat, centerLng, mlat, mlng) * 1609.344;
+    const bearing = dist < 1 ? 90 : bearingFromTo(centerLat, centerLng, mlat, mlng);
+    return destinationPoint(centerLat, centerLng, bearing, radiusMeters);
+  }
+
+  function formatRingLabel(miles) {
+    return (miles % 1 === 0 ? miles : miles.toFixed(1)) + ' mi';
+  }
+
+  function updateDistanceRingLabelPositions() {
+    if (!userLocation) return;
+    const clat = userLocation.lat;
+    const clng = userLocation.lng;
+    distanceRingLayers.forEach(({ label, radiusMeters }) => {
+      const pos = pointOnCircleTowardMapCenter(clat, clng, radiusMeters);
+      label.setLatLng(pos);
+    });
+  }
+
+  function updateDistanceCircles() {
+    if (!map || !userLocation) return;
+    distanceRingLayers.forEach(({ circle, label }) => {
+      map.removeLayer(circle);
+      map.removeLayer(label);
+    });
+    distanceRingLayers = [];
+    if (!$filterRings.checked) return;
+    const center = [userLocation.lat, userLocation.lng];
+    const clat = userLocation.lat;
+    const clng = userLocation.lng;
+    DISTANCE_RINGS_MILES.forEach(miles => {
+      const radiusMeters = miles * MILES_TO_METERS;
+      const circle = L.circle(center, {
+        radius: radiusMeters,
+        fill: false,
+        color: 'rgba(0,0,0,0.35)',
+        weight: 1.5
+      }).addTo(map);
+      const labelPos = pointOnCircleTowardMapCenter(clat, clng, radiusMeters);
+      const labelIcon = L.divIcon({
+        className: 'distance-ring-label',
+        html: '<span>' + formatRingLabel(miles) + '</span>',
+        iconSize: [36, 20],
+        iconAnchor: [0, 10]
+      });
+      const label = L.marker(labelPos, { icon: labelIcon }).addTo(map);
+      distanceRingLayers.push({ circle, label, radiusMeters });
+    });
+  }
+
   function updateUserMarker() {
     if (!map || !userLocation) return;
     if (userMarker) map.removeLayer(userMarker);
     userMarker = L.marker([userLocation.lat, userLocation.lng], { icon: userLocationIcon })
       .addTo(map)
       .bindPopup('You are here');
+    updateDistanceCircles();
   }
 
   function initMap() {
     const center = getCenter();
-    map = L.map('map').setView(center, DEFAULT_ZOOM);
+    map = L.map('map', { preferCanvas: true }).setView(center, DEFAULT_ZOOM);
     L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
       subdomains: 'abcd',
       maxZoom: 20
     }).addTo(map);
+    map.on('moveend', updateDistanceRingLabelPositions);
+    map.on('zoomend', updateDistanceRingLabelPositions);
     if (userLocation) updateUserMarker();
     window.addEventListener('resize', function onResize() {
       if (map) map.invalidateSize();
@@ -308,6 +391,7 @@
       $filterPriceValue.textContent = '$'.repeat(level);
       applyFilters();
     });
+    $filterRings.addEventListener('change', () => updateDistanceCircles());
   }
 
   init();
