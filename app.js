@@ -201,6 +201,9 @@
       maxZoom: 20
     }).addTo(map);
     if (userLocation) updateUserMarker();
+    window.addEventListener('resize', function onResize() {
+      if (map) map.invalidateSize();
+    });
   }
 
   function loadNearbyRestaurants() {
