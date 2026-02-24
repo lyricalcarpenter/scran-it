@@ -1,4 +1,4 @@
-# Scran.it: Local Restaurants in Your Area
+# Scran.it: Local Restaurants Near You
 
 ## Summary
 
@@ -17,6 +17,12 @@ This is the problem that Scran.it was designed to solve.
 - **Node.js** (v14 or later recommended). [Download Node.js](https://nodejs.org/) if you don’t have it.
 
 ## Running the application
+
+Just type (http://scran.it) into your search engine!
+
+If this raises a connection or security error, visit the temporary website at https://scran-it-production.up.railway.app/.
+
+### To run on your own hardware:
 
 1. **Clone or open the project** and go to the project folder:
    ```bash
@@ -46,9 +52,9 @@ To use a different port, set the `PORT` environment variable before starting, fo
 PORT=4000 npm start
 ```
 
-## Optional: seeding data
+## Seeding data for your area
 
-The app reads from `data/restaurants.json` and `data/chain_restaurants.json`. If you need to regenerate, update, or fetch this data for a different location:
+The app reads from `data/restaurants.json` and `data/chain_restaurants.json`, both lists of restaurants in Austin. To fit them with restaurants outside of Austin:
 
 - **Seed restaurants:**  
   `npm run seed`
@@ -56,11 +62,6 @@ The app reads from `data/restaurants.json` and `data/chain_restaurants.json`. If
 - **Seed chain data:**  
   `npm run seed-chains`
 
-- **Add restaurant photos** (requires a Google Places API key):  
-  Copy `.env.example` to `.env`, add your `GOOGLE_PLACES_API_KEY`, then run:
-  ```bash
-  npm run add-photos
-  ```
 
 ## Project structure
 
@@ -71,6 +72,6 @@ The app reads from `data/restaurants.json` and `data/chain_restaurants.json`. If
 
 ## Notes for Phil
 
-- As you mentioned, I may have screwed myself over by getting a **.it** URL.  The GoDaddy-Railway connection does not work and is flagged as being extremely suspicious, despite your and Cursor's best advice.  I will try to continue debugging this (GoDaddy might require a delay since our edits this morning), but at the time of submission I have not implemented the domain correctly.
+- As you mentioned, I may have screwed myself over by getting a **.it** URL.  The GoDaddy-Railway connection does not work and is flagged as being extremely suspicious, despite your and Cursor's best advice.  I will continue debugging this (GoDaddy might require a delay since our edits this morning), but at the time of submission I have not implemented the domain correctly.  I despise having to direct people to the Railway URL, but it's better than nothing.
 
 - Getting thumbnail images for each restaurant requires a Google Cloud API key, which was out of budget, so it's currently pulling images from the Picsum stock photo library.  I included them to give an idea of what the end-game UI layout would look like.
