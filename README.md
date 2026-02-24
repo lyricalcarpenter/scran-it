@@ -1,6 +1,16 @@
-# Scran.it
+# Scran.it: Local Restaurants in Your Area
 
-Scran.it is a aggregator of local restaurants in your area. Search by cuisine, dish, or restaurant name and see results on a map with distance and price filters.
+## Summary
+
+Scran.it is an aggregator of local restaurants in your area.  Search by cuisine, dish, or restaurant name and get results on a map with distance and price filters.
+
+## Background
+
+When I moved to Austin from Phoenix, I had always heard it was a "foodie" city.  But through the turmoil of adjusting to independent life in college, I ended up always eating at the same big-name places I had in Phoenix.  One day, I realized what the issue was:
+
+**I wanted to eat at local restaurants, instead of chains, but I didn't know where they were or what kind of food they served.**
+
+This is the problem that Scran.it was designed to solve.
 
 ## Prerequisites
 
@@ -38,7 +48,7 @@ PORT=4000 npm start
 
 ## Optional: seeding data
 
-The app reads from `data/restaurants.json` and `data/chain_restaurants.json`. If you need to (re)generate or update this data:
+The app reads from `data/restaurants.json` and `data/chain_restaurants.json`. If you need to regenerate, update, or fetch this data for a different location:
 
 - **Seed restaurants:**  
   `npm run seed`
@@ -57,3 +67,10 @@ The app reads from `data/restaurants.json` and `data/chain_restaurants.json`. If
 - `index.html`, `app.js`, `styles.css` — frontend (map, search, filters)
 - `server/index.js` — Express API serving the app and `/api/restaurants`, `/api/restaurants/nearby`
 - `data/restaurants.json`, `data/chain_restaurants.json` — restaurant and chain data used by the API
+
+
+## Notes for Phil
+
+- As you mentioned, I may have screwed myself over by getting a **.it** URL.  The GoDaddy-Railway connection does not work and is flagged as being extremely suspicious, despite your and Cursor's best advice.  I will try to continue debugging this (GoDaddy might require a delay since our edits this morning), but at the time of submission I have not implemented the domain correctly.
+
+- Getting thumbnail images for each restaurant requires a Google Cloud API key, which was out of budget, so it's currently pulling images from the Picsum stock photo library.  I included them to give an idea of what the end-game UI layout would look like.
